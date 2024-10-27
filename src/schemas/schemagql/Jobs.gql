@@ -1,0 +1,36 @@
+type Job {
+  id: ID!
+  user: ID
+  title: String
+  content: String
+  date: String
+  lastModified: String
+}
+
+input inputJob {
+  title: String!
+  content: String!
+  date: String!
+}
+
+input inputSetJob {
+  title: String
+  content: String
+  lastModified: String!
+}
+
+type Response {
+  result: String
+  status: Int!
+}
+
+type Query {
+  jobs: [Job]
+}
+
+type Mutation {
+  removeJob(id: String!): Job
+  createJob(job: inputJob!): Job
+  removeAllJobsUser: Response
+  setJob(id: ID!, job: inputSetJob!): Job
+}

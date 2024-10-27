@@ -1,0 +1,38 @@
+{
+  "name": "grud-graphql-order-now",
+  "version": "1.0.0",
+  "description": "GRUD for taks",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "nodemon --hormony src/main.ts",
+    "build": "npx tsc && npx ncp src/schemas/schemagql dist/schemas/schemagql",
+    "preview": "node dist/main.js",
+    "production": "node dist/main.js"
+  },
+  "keywords": [
+    "tasks",
+    "grud."
+  ],
+  "author": "EdwynG",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/load-files": "^7.0.0",
+    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.7.9",
+    "colors": "^1.4.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

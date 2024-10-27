@@ -1,0 +1,8 @@
+{
+    "watch": ["src", "tsconfig.json",".env"], 
+    "ignore": ["tests/*", "*.spec.js"], 
+    "ext": "js,json,ts,gql", 
+    "exec": "npx ts-node src/main.ts", 
+    "delay": "2000",
+    "verbose": true
+  }

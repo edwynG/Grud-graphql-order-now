@@ -1,0 +1,27 @@
+type User {
+  id: ID!
+  name: String
+  password: String
+  jobs: [Job]
+  token: String
+}
+
+input inputUser {
+  name: String!
+  password: String!
+}
+
+input Login {
+  name: String!
+  password: String!
+}
+
+type Query {
+  users: [User]
+  user: User
+  logginUser(credentials: Login!): User
+}
+
+type Mutation {
+  createUser(user: inputUser!): User
+}
